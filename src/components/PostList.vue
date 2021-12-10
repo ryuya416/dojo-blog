@@ -8,16 +8,16 @@
 </template>
 
 <script>
-import SinglePost from "./singlePost.vue";
+import { onMounted, onUnmounted, onUpdated } from "vue";
+import SinglePost from "./SinglePost.vue";
 export default {
   props: ["posts"],
-  components: {
-    SinglePost,
-  },
-  setup(props) {
-    console.log(props.posts);
-  },
   components: { SinglePost },
+  setup(props) {
+    onMounted(() => console.log("component mounted"));
+    onUnmounted(() => console.log("component unmounted"));
+    onUpdated(() => console.log("component updated"));
+  },
 };
 </script>
 
