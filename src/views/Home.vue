@@ -12,7 +12,7 @@
 </template>
 
 <script>
-// import { ref } from "vue";
+import { ref } from "vue";
 import getPosts from "../composables/getPosts";
 // component imports
 import PostList from "../components/PostList.vue";
